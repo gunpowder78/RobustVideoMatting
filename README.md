@@ -8,6 +8,13 @@ Official repository for the paper [Robust High-Resolution Video Matting with Tem
 
 <br>
 
+## News
+
+* [Aug 25 2021] Source code and pretrained models are published.
+* [Jul 27 2021] Paper is accepted by WACV 2022.
+
+<br>
+
 ## Showreel
 Watch the [showreel](https://youtu.be/Jvzltozpbpk) to see the model's performance. 
 
@@ -43,29 +50,20 @@ We recommend MobileNetv3 models for most use cases. ResNet50 models are the larg
         <tr>
             <td>PyTorch</td>
             <td>
-                <a  href="https://drive.google.com/file/d/15S4LrDHBZVfp8jBpNfCFXwMqYm9qSCA-/view">rvm_mobilenetv3.pth</a><br>
-                <a  href="https://drive.google.com/file/d/15xD_v-v9lMiEJWW3UkXDUe0RAxvUnCuP/view">rvm_resnet50.pth</a>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3.pth">rvm_mobilenetv3.pth</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_resnet50.pth">rvm_resnet50.pth</a>
             </td>
             <td>
                 Official weights for PyTorch. <a href="documentation/inference.md#pytorch">Doc</a>
             </td>
         </tr>
         <tr>
-            <td>Torch Hub</td>
-            <td>
-                Nothing to download.
-            </td>
-            <td>
-                Upcoming.
-            </td>
-        </tr>
-        <tr>
             <td>TorchScript</td>
             <td>
-                <a  href="https://drive.google.com/file/d/1WZsb7BLXk5n-8WYrR3A0DD8aOuc_Dl_H/view">rvm_mobilenetv3_fp32.torchscript</a><br>
-                <a  href="https://drive.google.com/file/d/1aZ8vJujNw44kND_ONkF-nLpyXw4cckJI/view">rvm_mobilenetv3_fp16.torchscript</a><br>
-                <a  href="https://drive.google.com/file/d/18L-2Iq0aVIty2JwNcBSWT6K4cYvvQ9k0/view">rvm_resnet50_fp32.torchscript</a><br>
-                <a  href="https://drive.google.com/file/d/1zYTPsu1hcdEnPYSGYWE7zrMSDQmFLbtU/view">rvm_resnet50_fp16.torchscript</a>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp32.torchscript">rvm_mobilenetv3_fp32.torchscript</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp16.torchscript">rvm_mobilenetv3_fp16.torchscript</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_resnet50_fp32.torchscript">rvm_resnet50_fp32.torchscript</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_resnet50_fp16.torchscript">rvm_resnet50_fp16.torchscript</a>
             </td>
             <td>
                 If inference on mobile, consider export int8 quantized models yourself. <a href="documentation/inference.md#torchscript">Doc</a>
@@ -74,10 +72,10 @@ We recommend MobileNetv3 models for most use cases. ResNet50 models are the larg
         <tr>
             <td>ONNX</td>
             <td>
-                <a  href="https://drive.google.com/file/d/10NJX_J0ilqSk6J03HTlmLKkU22AYp0EV/view">rvm_mobilenetv3_fp32.onnx</a><br>
-                <a  href="https://drive.google.com/file/d/1V4I5LZ4PhoinyupsvZuxaNDDlKAPOyOF/view">rvm_mobilenetv3_fp16.onnx</a><br>
-                <a  href="https://drive.google.com/file/d/1prnA9IP48zk-L4LwYHh_CfyTj7BOcJ3W/view">rvm_resnet50_fp32.onnx</a><br>
-                <a  href="https://drive.google.com/file/d/1gY0vK_evWNZQi_iEf35jrasX46PEtMw6/view">rvm_resnet50_fp16.onnx</a>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp32.onnx">rvm_mobilenetv3_fp32.onnx</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp16.onnx">rvm_mobilenetv3_fp16.onnx</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_resnet50_fp32.onnx">rvm_resnet50_fp32.onnx</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_resnet50_fp16.onnx">rvm_resnet50_fp16.onnx</a>
             </td>
             <td>
                 Tested on ONNX Runtime with CPU and CUDA backends. Provided models use opset 12. <a href="documentation/inference.md#onnx">Doc</a>, <a href="https://github.com/PeterL1n/RobustVideoMatting/tree/onnx">Exporter</a>.
@@ -86,8 +84,8 @@ We recommend MobileNetv3 models for most use cases. ResNet50 models are the larg
         <tr>
             <td>TensorFlow</td>
             <td>
-                <a  href="https://drive.google.com/file/d/114KBJaHITM8XmmMj7cn0V8yjLJ2kdsBS/view">rvm_mobilenetv3_tf.zip</a><br>
-                <a  href="https://drive.google.com/file/d/1aB3qrBjdVv3nl5vgIsCp3JRbhMUnlHSs/view">rvm_resnet50_tf.zip</a>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_tf.zip">rvm_mobilenetv3_tf.zip</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_resnet50_tf.zip">rvm_resnet50_tf.zip</a>
             </td>
             <td>
                 TensorFlow 2 SavedModel. <a href="documentation/inference.md#tensorflow">Doc</a>
@@ -96,7 +94,7 @@ We recommend MobileNetv3 models for most use cases. ResNet50 models are the larg
         <tr>
             <td>TensorFlow.js</td>
             <td>
-                <a  href="https://drive.google.com/file/d/12DRwTrS3Ok4OLMSYiUe3xCrjbqXGrvmP/view">rvm_mobilenetv3_tfjs_int8.zip</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_tfjs_int8.zip">rvm_mobilenetv3_tfjs_int8.zip</a><br>
             </td>
             <td>
                 Run the model on the web. <a href="https://peterl1n.github.io/RobustVideoMatting/#/demo">Demo</a>, <a href="https://github.com/PeterL1n/RobustVideoMatting/tree/tfjs">Starter Code</a>
@@ -105,10 +103,10 @@ We recommend MobileNetv3 models for most use cases. ResNet50 models are the larg
         <tr>
             <td>CoreML</td>
             <td>
-                <a  href="https://drive.google.com/file/d/1fY3MU16ehqmm70V0Z4x95BB244vGf6aB/view">rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel</a><br>
-                <a  href="https://drive.google.com/file/d/1MN7GSpC03I_aFpD_pVyN0kUmzgft-cLE/view">rvm_mobilenetv3_1280x720_s0.375_int8.mlmodel</a><br>
-                <a  href="https://drive.google.com/file/d/1YqsMcT-e0oAr7uDaH1hoLMe24UAqMJDB/view">rvm_mobilenetv3_1920x1080_s0.25_fp16.mlmodel</a><br>
-                <a  href="https://drive.google.com/file/d/1F6xCXuyHX1AX5a05D2s0fcvIw6wzsiRd/view">rvm_mobilenetv3_1920x1080_s0.25_int8.mlmodel</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel">rvm_mobilenetv3_1280x720_s0.375_fp16.mlmodel</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_1280x720_s0.375_int8.mlmodel">rvm_mobilenetv3_1280x720_s0.375_int8.mlmodel</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_1920x1080_s0.25_fp16.mlmodel">rvm_mobilenetv3_1920x1080_s0.25_fp16.mlmodel</a><br>
+                <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_1920x1080_s0.25_int8.mlmodel">rvm_mobilenetv3_1920x1080_s0.25_int8.mlmodel</a><br>
             </td>
             <td>
                 CoreML does not support dynamic resolution. Other resolutions can be exported yourself. Models require iOS 13+. <code>s</code> denotes <code>downsample_ratio</code>. <a href="documentation/inference.md#coreml">Doc</a>, <a href="https://github.com/PeterL1n/RobustVideoMatting/tree/coreml">Exporter</a>
