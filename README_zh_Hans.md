@@ -57,6 +57,15 @@
             </td>
         </tr>
         <tr>
+            <td>TorchHub</td>
+            <td>
+                无需手动下载。
+            </td>
+            <td>
+                更方便地在你的 PyTorch 项目里使用此模型。<a href="documentation/inference_zh_Hans.md#torchhub">文档</a>
+            </td>
+        </tr>
+        <tr>
             <td>TorchScript</td>
             <td>
                 <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp32.torchscript">rvm_mobilenetv3_fp32.torchscript</a><br>
@@ -169,6 +178,16 @@ with torch.no_grad():
         fgr, pha, *rec = model(src.cuda(), *rec, downsample_ratio)  # 将上一帧的记忆给下一帧
         com = fgr * pha + bgr * (1 - pha)              # 将前景合成到绿色背景
         writer.write(com)                              # 输出帧
+```
+
+5. 模型和 API 也可通过 TorchHub 快速载入。
+
+```python
+# 加载模型
+model = torch.hub.load("PeterL1n/RobustVideoMatting", "mobilenetv3") # 或 "resnet50"
+
+# 转换 API
+convert_video = torch.hub.load("PeterL1n/RobustVideoMatting", "converter")
 ```
 
 [推断文档](documentation/inference_zh_Hans.md)里有对 `downsample_ratio` 参数，API 使用，和高阶使用的讲解。

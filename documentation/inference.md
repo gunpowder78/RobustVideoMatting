@@ -8,6 +8,7 @@
     * [Downsample Ratio](#downsample-ratio)
     * [Recurrent States](#recurrent-states)
 * [PyTorch](#pytorch)
+* [TorchHub](#torchhub)
 * [TorchScript](#torchscript)
 * [ONNX](#onnx)
 * [TensorFlow](#tensorflow)
@@ -162,9 +163,27 @@ python inference.py \
 
 <br><br><br>
 
+## TorchHub
+
+Model loading:
+
+```python
+model = torch.hub.load("PeterL1n/RobustVideoMatting", "mobilenetv3") # or "resnet50"
+```
+
+Use the conversion function. Refer to the documentation for `convert_video` function above.
+
+```python
+convert_video = torch.hub.load("PeterL1n/RobustVideoMatting", "converter")
+
+convert_video(model, ...args...)
+```
+
+<br><br><br>
+
 ## TorchScript
 
-Model loading
+Model loading:
 
 ```python
 import torch

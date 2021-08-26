@@ -8,6 +8,7 @@
     * [下采样比](#下采样比)
     * [循环记忆](#循环记忆)
 * [PyTorch](#pytorch)
+* [TorchHub](#torchhub)
 * [TorchScript](#torchscript)
 * [ONNX](#onnx)
 * [TensorFlow](#tensorflow)
@@ -158,6 +159,24 @@ python inference.py \
     --output-foreground "foreground.mp4" \
     --output-video-mbps 4 \
     --seq-chunk 12
+```
+
+<br><br><br>
+
+## TorchHub
+
+载入模型：
+
+```python
+model = torch.hub.load("PeterL1n/RobustVideoMatting", "mobilenetv3") # or "resnet50"
+```
+
+使用转换 API，具体请参考之前对 `convert_video` 的文档。
+
+```python
+convert_video = torch.hub.load("PeterL1n/RobustVideoMatting", "converter")
+
+convert_video(model, ...args...)
 ```
 
 <br><br><br>

@@ -58,6 +58,15 @@ We recommend MobileNetv3 models for most use cases. ResNet50 models are the larg
             </td>
         </tr>
         <tr>
+            <td>TorchHub</td>
+            <td>
+                Nothing to Download.
+            </td>
+            <td>
+                Easiest way to use our model in your PyTorch project. <a href="documentation/inference.md#torchhub">Doc</a>
+            </td>
+        </tr>
+        <tr>
             <td>TorchScript</td>
             <td>
                 <a  href="https://github.com/PeterL1n/RobustVideoMatting/releases/download/v1.0.0/rvm_mobilenetv3_fp32.torchscript">rvm_mobilenetv3_fp32.torchscript</a><br>
@@ -170,6 +179,16 @@ with torch.no_grad():
         fgr, pha, *rec = model(src.cuda(), *rec, downsample_ratio)  # Cycle the recurrent states.
         com = fgr * pha + bgr * (1 - pha)              # Composite to green background. 
         writer.write(com)                              # Write frame.
+```
+
+5. The models and converter API are also available through TorchHub.
+
+```python
+# Load the model.
+model = torch.hub.load("PeterL1n/RobustVideoMatting", "mobilenetv3") # or "resnet50"
+
+# Converter API.
+convert_video = torch.hub.load("PeterL1n/RobustVideoMatting", "converter")
 ```
 
 Please see [inference documentation](documentation/inference.md) for details on `downsample_ratio` hyperparameter, more converter arguments, and more advanced usage.
