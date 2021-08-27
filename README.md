@@ -16,7 +16,7 @@ Official repository for the paper [Robust High-Resolution Video Matting with Tem
 <br>
 
 ## Showreel
-Watch the [showreel](https://youtu.be/Jvzltozpbpk) to see the model's performance. 
+Watch the showreel video ([YouTube](https://youtu.be/Jvzltozpbpk), [Bilibili](https://www.bilibili.com/video/BV1Z3411B7g7/)) to see the model's performance. 
 
 <p align="center">
     <a href="https://youtu.be/Jvzltozpbpk">

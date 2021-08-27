@@ -16,7 +16,7 @@
 <br>
 
 ## 展示视频
-观看[展示视频](https://youtu.be/Jvzltozpbpk)，了解模型能力。
+观看展示视频 ([YouTube](https://youtu.be/Jvzltozpbpk), [Bilibili](https://www.bilibili.com/video/BV1Z3411B7g7/))，了解模型能力。
 <p align="center">
     <a href="https://youtu.be/Jvzltozpbpk">
         <img src="documentation/image/showreel.gif">
