@@ -28,8 +28,9 @@
 <br>
 
 
-## 网页 Demo
-前往[网页 Demo](https://peterl1n.github.io/RobustVideoMatting/#/demo)，在浏览器里看摄像头抠像效果。
+## Demo
+* [网页](https://peterl1n.github.io/RobustVideoMatting/#/demo): 在浏览器里看摄像头抠像效果，展示模型内部循环记忆值。
+* [Colab](https://colab.research.google.com/drive/10z-pNKRnVNsp0Lq9tH1J_XPZ7CBC_uHm?usp=sharing): 用我们的模型转换你的视频。
 
 <br>
 
